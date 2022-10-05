@@ -2,5 +2,5 @@ import pytest
 
 @pytest.mark.base
 def test_00_1_base_test():
-    from MDAT import bin
+    from mdat import bin
 
