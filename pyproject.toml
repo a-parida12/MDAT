@@ -26,7 +26,12 @@ itk = "5.3rc04"
 
 
 [tool.poetry.dev-dependencies]
-
+pytest = "^6.2.5"
+flake8 = "^4.0.1"
+pytest-cov = "^3.0.0"
+commitizen = "^2.20.3"
+bandit = "^1.7.1"
+pre-commit = "^2.17.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
