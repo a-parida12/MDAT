@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "mdat"
+name = "MDAT"
 version = "0.0.1"
 description = "A pypi release of the MDAT"
 authors = ["Abhijeet Parida <abhijeet.parida@tum.de>"]
