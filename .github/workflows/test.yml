@@ -3,7 +3,7 @@ name: Python Application Testing
 on: [push]
 
 env:
-  PYTHON_VERSION: "3.8.5"
+  PYTHON_VERSION: "3.10.4"
   PROJECT_FOLDER: MDAT
   TEST_FOLDER: tests
   COVERAGE_LIMIT: 0
