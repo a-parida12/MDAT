@@ -5,7 +5,7 @@ on:
 
 env:
   PYTHON_VERSION: "3.8.5"
-  PROJECT_FOLDER: hapy_pypi
+  PROJECT_FOLDER: MDAT
   TEST_FOLDER: tests
   
 jobs:
@@ -41,7 +41,7 @@ jobs:
       run: |
         poetry run python -m pytest -v ${{env.TEST_FOLDER}}
     
-  Release:
+    Release:
     needs: Quality
     # https://github.community/t/how-do-i-specify-job-dependency-running-in-another-workflow/16482
     if: github.event_name == 'push' && github.ref == 'refs/heads/main' && !contains(github.event.head_commit.message, 'chore(release):')
@@ -49,11 +49,14 @@ jobs:
     steps:
       - uses: actions/setup-python@v2
         with:
-          python-version: ${{env.PYTHON_VERSION}}
+          python-version: 3.8
       - name: Checkout code
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GH_TOKEN }}
       - name: Python Semantic Release
-        uses: relekang/python-semantic-release@master
+        uses: aadhithya/py-semantic-release-action@master
         with:
           github_token: ${{ secrets.GH_TOKEN }}
           repository_username: ${{ secrets.PYPI_USER }}
