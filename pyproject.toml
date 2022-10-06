@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "mdat"
+name = "mdatpy"
 version = "0.0.1"
 description = "A pypi release of the MDAT"
 authors = ["Abhijeet Parida <abhijeet.parida@tum.de>"]
@@ -9,20 +9,12 @@ readme = 'README.md'
 keywords = []
 
 [tool.poetry.dependencies]
-python = "3.10.4"
-numpy = "1.23.3"
-tensorflow = "2.10.0"
-SimpleITK = "^2.2.0"
-scipy = "^1.9.1"
-Pyro4 = "^4.82"
-tqdm = "^4.64.1"
+python = "^3.7"
+tensorflow = "1.14.0"
+SimpleITK = "1.2"
 scikit-image = "^0.19.3"
-scikit-learn = "^1.1.2"
-matplotlib = "^3.6.0"
-cachetools = "^5.2.0"
-lz4 = "^4.0.2"
-zfpy = "^1.0.0.post3"
-itk = "5.3rc04"
+itk = "^5.2.1.post1"
+
 
 
 [tool.poetry.dev-dependencies]
